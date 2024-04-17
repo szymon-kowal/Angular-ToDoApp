@@ -1,0 +1,18 @@
+<form
+  #todoForm="ngForm"
+  (ngSubmit)="
+    addToDo(todoForm.value.title, todoForm.value.text, todoForm.value.endDate)
+  "
+>
+  <input type="text" name="title" ngModel placeholder="Title" />
+  <input type="text" name="text" ngModel placeholder="Description" />
+  <input type="date" name="endDate" ngModel placeholder="End Date" />
+  <button type="submit">Add Todo</button>
+</form>
+<div class="todo-container" *ngFor="let todo of toDoData">
+  <div><strong>ID:</strong> {{ todo.id }}</div>
+  <div><strong>Title:</strong> {{ todo.title }}</div>
+  <div><strong>End Date:</strong> {{ todo.endDate }}</div>
+  <div><strong>Description:</strong> {{ todo.text }}</div>
+  <button (click)="removeToDo(todo.id)">Remove</button>
+</div>

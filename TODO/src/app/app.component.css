@@ -1,0 +1,44 @@
+html,
+body {
+  height: 100%; /* Ensures both html and body extend full height of the viewport */
+  margin: 0; /* Resets default margin */
+  padding: 0; /* Resets default padding */
+}
+
+.pageContainer {
+  display: flex; /* Enables flexbox */
+  flex-direction: column; /* Stacks children vertically */
+  min-height: 100vh; /* Minimum height is 100% of the viewport height */
+}
+
+h1,
+h2 {
+  /* Header and footer */
+  margin: 0; /* Removes default margin */
+  padding: 10px; /* Adds padding for visual spacing */
+  background: #f8f9fa; /* Light background color for visibility */
+}
+
+.container {
+  flex: 1; /* Grows to fill available space */
+  padding: 20px; /* Padding for content inside container */
+  background: #e9ecef; /* Light gray background for the container */
+}
+
+.pageContainer > .container {
+  flex: 1;
+  padding: 20px;
+  background-color: #fff;
+}
+
+.pageContainer > div {
+  padding: 10px;
+  background-color: #eee;
+  text-align: center;
+}
+
+.header,
+.footer {
+  background-color: #333;
+  color: #242525;
+}
