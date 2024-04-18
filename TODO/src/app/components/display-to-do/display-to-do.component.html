@@ -10,9 +10,11 @@
   <button type="submit">Add Todo</button>
 </form>
 <div class="todo-container" *ngFor="let todo of toDoData">
-  <div><strong>ID:</strong> {{ todo.id }}</div>
-  <div><strong>Title:</strong> {{ todo.title }}</div>
-  <div><strong>End Date:</strong> {{ todo.endDate }}</div>
-  <div><strong>Description:</strong> {{ todo.text }}</div>
+  <a routerLink="/todo/{{ todo.id }}">
+    <div><strong>ID:</strong> {{ todo.id }}</div>
+    <div><strong>Title:</strong> {{ todo.title }}</div>
+    <div><strong>End Date:</strong> {{ todo.endDate }}</div>
+    <div><strong>Description:</strong> {{ todo.text }}</div>
+  </a>
   <button (click)="removeToDo(todo.id)">Remove</button>
 </div>

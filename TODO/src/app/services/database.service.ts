@@ -1,4 +1,4 @@
-import { Injectable, input } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { ToDo } from '../interfaces/ToDo';
 
 @Injectable({

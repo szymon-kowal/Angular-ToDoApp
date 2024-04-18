@@ -3,10 +3,11 @@ import { DatabaseService } from '../../services/database.service';
 import { ToDo } from '../../interfaces/ToDo';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 @Component({
   selector: 'app-display-to-do',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, RouterModule],
   templateUrl: './display-to-do.component.html',
   styleUrl: './display-to-do.component.css',
 })
